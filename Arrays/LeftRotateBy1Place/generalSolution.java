@@ -1,8 +1,8 @@
-package Arrays.RemoveDuplicate;
-// array should be sorted
+package Arrays.LeftRotateBy1Place;
+
 import java.util.Scanner;
 
-public class optimal {
+public class generalSolution {
     public static void main(String args[])
     {
         Scanner sc = new Scanner(System.in);
@@ -19,17 +19,16 @@ public class optimal {
                 arr[i] = sc.nextInt();
             }
         }
-        int i=0;
-        for(int j=1;j<n;j++)
+        int temp = arr[0];
+        for(int i=1;i<n;i++)
         {
-            if(arr[i]!=arr[j])
-            {
-                arr[i+1]=arr[j];
-                i++;
-
-            }
+            arr[i-1]=arr[i];
         }
-        int k = i+1;
-        System.out.println("The number of duplicates in the array:"+k);
+        arr[n-1]=temp;
+        System.out.println("The left rotated array by 1 :");
+        for (int i=0;i<n;i++)
+        {
+            System.out.print(arr[i]+" ");
+        }
     }
 }
