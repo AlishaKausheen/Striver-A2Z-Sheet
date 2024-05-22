@@ -42,6 +42,7 @@ public class TwoSum {
         }
         return ans;
     }
+    //only if array is sorted
     static int[] optimal(int[] arr , int target){
         int[] ans = {-1,-1};
         int i=0;
