@@ -1,5 +1,5 @@
 import java.util.Arrays;
-
+//tc: o(nlogn+mlogm+m)
 public class AssignCookies {
     public static void main(String[] args) {
         int[] g = {1,5,3,3,4};
@@ -11,7 +11,7 @@ public class AssignCookies {
         Arrays.sort(s);
         Arrays.sort(g);
         int l=0, r=0;
-        while (l<s.length){
+        while (l<s.length && r<g.length){
             if(g[r]<=s[l]){
                 r=r+1;
             }
