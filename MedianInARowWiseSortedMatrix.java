@@ -10,7 +10,7 @@ public class MedianInARowWiseSortedMatrix {
     static int brute(int[][] matrix){
         ArrayList<Integer> arr = new ArrayList<>();
         for (int i=0;i< matrix.length;i++){
-            for (int j=0;j<matrix[0].length){
+            for (int j=0;j<matrix[0].length;j++){
                 arr.add(matrix[i][j]);
             }
         }
